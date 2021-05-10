@@ -1,0 +1,125 @@
+.contant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sing {
+  position: relative;
+  width: 900px;
+  -webkit-box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+          box-shadow: 10px 10px 10px 5px rgba(187, 187, 189, 0.87);
+  background: #fff;
+  padding: 50px 40px;
+  margin: 3% auto 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sing h1 {
+  color: #0957e7;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sing h2 {
+  text-align: left;
+  color: #5f5f5f;
+}
+
+.sing h4 {
+  color: #909090;
+  text-align: left;
+}
+
+.sing a {
+  text-decoration: none;
+  color: #020202;
+}
+
+.sing h5 {
+  color: #1b1b1b;
+}
+
+.sing h5 a {
+  color: #6e6e6e;
+}
+
+.em {
+  border-radius: 10px;
+  padding: 14px 10px;
+  margin: 20px auto;
+  width: 300px;
+  height: 45px;
+  color: rgba(51, 51, 51, 0.829);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  border: 2px solid #717475bb;
+  outline: none;
+}
+
+.em:focus {
+  width: 350px;
+  border-color: #0957e7;
+}
+
+.fb {
+  color: #fff;
+  width: 60%;
+  height: 40px;
+  padding: 10px;
+  font-size: 15px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 2px;
+  border: 2px solid #6c63ff;
+  background-color: rgba(59, 123, 241, 0.877);
+  color: #fff;
+}
+
+.fb:hover {
+  background-color: white;
+  color: black;
+}
+
+.si {
+  color: #fff;
+  width: 70%;
+  height: 40px;
+  font-size: 15px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 2px;
+  border: 2px solid #6c63ff;
+  background-color: #0d4bbe;
+}
+
+.si:hover {
+  background-color: white;
+  color: black;
+}
+
+hr {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.or {
+  background: #f8f9fa;
+  margin: -28px auto 10px;
+  width: 30px;
+}
+/*# sourceMappingURL=registre.css.map */
