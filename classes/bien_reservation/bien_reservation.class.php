@@ -16,7 +16,7 @@ class bien_reservation extends DB
     public function insert_bien_res($id_bien, $id_reservation, $nb_jour)
     {
         $req = "INSERT INTO chambre_res values(?,?,?) ";
-        $stmt = $this->connect()->prepare($req);
+        $stmt = $this->connect()->prepare($req) or die(print_r($stmt->errorInfo()));
         $stmt->execute([$id_bien, $id_reservation, $nb_jour]);
     }
 }

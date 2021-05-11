@@ -24,7 +24,7 @@ class bien extends DB
     public function setBien($type_bien, $lit, $vue, $pension, $img, $prix)
     {
         $req = "INSERT INTO bien(Nom_Type,Type_Vue,Type_Lit,Type_Pension,PRIX,img) values(?,?,?,?,?,?)";
-        $stmt = $this->connect()->prepare($req);
+        $stmt = $this->connect()->prepare($req) or die(print_r($stmt->errorInfo()));
         $stmt->execute([$type_bien, $lit, $vue, $pension, $img, $prix]);
     }
 }

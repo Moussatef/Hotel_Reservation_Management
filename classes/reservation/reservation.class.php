@@ -9,13 +9,13 @@ class reservation extends DB
     public function setReservation($idclient)
     {
         $req = "INSERT INTO reservation(id_client) values (?)";
-        $stmt = $this->connect()->prepare($req);
+        $stmt = $this->connect()->prepare($req) or die(print_r($stmt->errorInfo()));
         $stmt->execute([$idclient]);
     }
     public function setReservation_en($idclient, $id_enfant)
     {
         $req = "INSERT INTO reservation(id_client,id_enfant) values (?,?)";
-        $stmt = $this->connect()->prepare($req);
+        $stmt = $this->connect()->prepare($req) or die(print_r($stmt->errorInfo()));
         $stmt->execute([$idclient, $id_enfant]);
     }
 
