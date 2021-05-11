@@ -146,7 +146,7 @@ require '../includs/autoload.inc.php'; ?>
                             </div>
                             <div id="checkout" class="row invisible">
                                 <div class="col-6">
-                                    <input type="button" id="btn_sub" class="w-100 btn btn-primary btn-md" value="Submit">
+                                    <input type="button" id="btn_sub" class="w-100 btn btn-primary btn-md" value="New Reservation">
                                 </div>
                                 <div class="col-6">
                                     <input type="button" id="btn_plus" class="w-100 btn btn-primary btn-md" value="Submit & Add Reservation +">

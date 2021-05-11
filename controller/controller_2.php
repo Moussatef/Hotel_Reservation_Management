@@ -14,7 +14,7 @@ $enfantx = new enfant;
 // && isset($_POST["lit"]) && isset($_POST["vue"]) && isset($_POST["pension"])
 if (!empty($_SESSION['ID_PClient'])) {
     $idclient = $_SESSION['ID_PClient'];
-    if (isset($_POST["bien"]) && !empty($_POST["bien"]) && $_POST["prix"] != 0) {
+    if (isset($_POST["bien"]) && !empty($_POST["bien"]) && $_POST["prix"] != 0 && isset($_POST["Lit"]) && strcmp($_POST["Lit"], "Null") != 0) {
         $bien = $_POST["bien"];
         $lit = isset($_POST["Lit"]) ? $_POST["Lit"] : "Null";
         $vue = isset($_POST["Vue"]) ? $_POST["Vue"] : "Null";
