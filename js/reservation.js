@@ -30,7 +30,7 @@ function chick_bien() {
         case "chambre double": div_lit.innerHTML = `
                                             <label for="Lit" class="form-label">Type De Lit</label>
                                             <select class="form-select" name="Lit" onchange="chick_lit()" id="Lit" required>
-                                                <option value="Null">Choose...</option>
+                                                <option value="Null" selected hidden>Choose...</option>
                                                 <option value="Lit double">Lit double</option>
                                                 <option value="Lit simple">2 Lit simple</option>
                                             </select>
@@ -51,7 +51,7 @@ function chick_bien() {
             Div_Vue.innerHTML = "<hr class='my-4>' "
             div_lit.innerHTML = `<label for="Vue" class="form-label">Type De Vue</label>
                                             <select  onchange="chick_vue()" name="Vue" class="form-select" id="Vue" required>
-                                                <option value="Null">Choose...</option>
+                                                <option value="Null" selected hidden>Choose...</option>
                                                 <option value="interieur">Vue interieur</option>
                                                 <option value="extrieur">Vue extrieur</option>
                                             </select>
@@ -109,7 +109,7 @@ function chick_lit() {
         case "Lit double":
             div_Vue.innerHTML = `<label for="Vue" class="form-label">Type De Vue</label>
                         <select class="form-select" name="Vue" onchange="chick_vue()" onchange="totalprix()" id="Vue" required>
-                            <option value="Null">Choose...</option>
+                            <option value="Null" selected hidden>Choose...</option>
                             <option value="interieur">Vue interieur</option>
                             <option value="extrieur">Vue extrieur</option>
                         </select>
@@ -120,7 +120,7 @@ function chick_lit() {
         case " Lit simple":
             div_Vue.innerHTML = `<label for="Vue" class="form-label">Type De Vue</label>
                         <select class="form-select" name="Vue" onchange="chick_vue()"  id="Vue" required>
-                            <option value="Null">Choose...</option>
+                            <option value="Null" selected hidden>Choose...</option>
                             <option value="interieur">Vue interieur</option>
                         </select>
                         <div class="invalid-feedback">
@@ -158,7 +158,7 @@ function chick_Pension() {
         case "demi":
             Div_Pension.innerHTML = `<label for="Ponsion_ch" class="form-label">Type De Demi</label>
             <select class="form-select" onchange="demi()"  id="Demi" required>
-                <option value="Null">Choose...</option>
+                <option value="Null" selected hidden>Choose...</option>
                 <option value="dej/dej">petit dej/dej</option>
                 <option value="dej/diner">petit dej/diner</option>
             </select>
@@ -210,7 +210,7 @@ function chick_enfant() {
                 <div  class="col-6 invisible" id="bn">
                 <label for="nbenfant" class="form-label">Select chambre !</label>
                     <select class="form-select" id="select_bambin" onchange="check_bn()" required>
-                        <option value="Null">Choose...</option>
+                        <option value="Null" selected hidden>Choose...</option>
                         <option value="avec lit 25%">avec lit 25%</option>
                         <option value="sans lit">sans lit</option>
                     </select>
@@ -222,7 +222,7 @@ function chick_enfant() {
                 <div  class="col-6 invisible" id="en">
                 <label for="nbenfant" class="form-label">Select chambre ef !</label>
                     <select class="form-select" id="select_enfant" onchange="check_en()" required>
-                        <option value="Null" >Choose...</option>
+                        <option value="Null" selected hidden >Choose...</option>
                         <option value="chambre simple 50%">chambre simple 50%</option>
                     </select>
                 </div>
@@ -233,7 +233,7 @@ function chick_enfant() {
                 <div  class="col-6 invisible"  id="ad">
                 <label for="nbenfant" class="form-label">Select chambre !</label>
                     <select class="form-select" id="select_adulte" onchange="check_ad()" required>
-                        <option value="Null" >Choose...</option>
+                        <option value="Null" selected hidden>Choose...</option>
                         <option value="chambre simple">chambre simple</option>
                         <option value="chambre simple lit 70%">chambre simple avec lit 70%</option>
                     </select>
@@ -246,14 +246,6 @@ function chick_enfant() {
         // alert("111")
     }
 }
-
-
-var v1 = "invisible";
-var v2 = "invisible";
-var v3 = "invisible";
-
-
-
 var prix_En = 0;
 var prix_Bn = 0;
 var prix_Ad = 0;

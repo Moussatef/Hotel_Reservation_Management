@@ -83,7 +83,7 @@ require '../includs/autoload.inc.php'; ?>
                             <div class="col-sm-6">
                                 <label for="bine" class="form-label">Bien</label>
                                 <select class="form-select" name="bien" onchange="chick_bien()" value="" id="bien" required>
-                                    <option value="Null">Choose...</option>
+                                    <option value="Null" selected hidden>Choose...</option>
                                     <option value="chambre double">chambre double</option>
                                     <option value="chambre simple">chambre simple</option>
                                     <option value="Appartement">Appartement</option>
@@ -100,7 +100,7 @@ require '../includs/autoload.inc.php'; ?>
                             <div class="col-8">
                                 <label for="pension" class="form-label">Pension</label>
                                 <select class="form-select" disabled name="pension" onchange="chick_Pension()" id="pension" required>
-                                    <option value="Null">Choose...</option>
+                                    <option value="Null" selected hidden>Choose...</option>
                                     <option value="complete">complete</option>
                                     <option value="sans">sans</option>
                                     <option value="demi">demi</option>

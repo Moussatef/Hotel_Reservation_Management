@@ -31,24 +31,42 @@ if (!empty($_SESSION['ID_PClient'])) {
                 $select_bambin = isset($_POST["select_bambin"]) ? $_POST["select_bambin"] : "NULL";
                 $select_enfant = isset($_POST["select_enfant"]) ? $_POST["select_enfant"] : "NULL";
                 $select_adulte = isset($_POST["select_adulte"]) ? $_POST["select_adulte"] : "NULL";
-                $enfantx->insert_enfant($idclient, $nb_bambin, $nb_enfant, $nb_adulte, $select_bambin, $select_enfant, $select_adulte);
-                $rowE = $enfantx->getLastEnfant($idclient);
-                $reservation->setReservation_en($idclient, $rowE["id_enfant"]);
-                $bienx->setBien($bien, $vue, $lit, $pension, $prix, $img_bien);
-                $row =  $chambre_res->list_bien_reservation();
-                $chambre_res->insert_bien_res($row["id_bien"], $row["id_reservation"], $nb_jour);
-                echo '<div class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
-                echo '<div class="alert alert-success mt-2" role="alert"><p> success insert enfant  </p></div>';
+                if ($_POST["cmp"] == 0 || $_POST["cmp"] == 1) {
+                    $enfantx->insert_enfant($idclient, $nb_bambin, $nb_enfant, $nb_adulte, $select_bambin, $select_enfant, $select_adulte);
+                    $rowE = $enfantx->getLastEnfant($idclient);
+                    $reservation->setReservation_en($idclient, $rowE["id_enfant"]);
+                    $bienx->setBien($bien, $vue, $lit, $pension, $prix, $img_bien);
+                    $row =  $chambre_res->list_bien_reservation();
+                    echo '<div class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
+                    echo '<div class="alert alert-success mt-2" role="alert"><p> success insert enfant  </p></div>';
+                    $chambre_res->insert_bien_res($row["id_bien"], $row["id_reservation"], $nb_jour);
+                } else if ($_POST["cmp"] > 1) {
+                    $enfantx->insert_enfant($idclient, $nb_bambin, $nb_enfant, $nb_adulte, $select_bambin, $select_enfant, $select_adulte);
+                    $rowE = $enfantx->getLastEnfant($idclient);
+                    $bienx->setBien($bien, $vue, $lit, $pension, $prix, $img_bien);
+                    $row =  $chambre_res->list_bien_reservation();
+                    $chambre_res->insert_bien_res($row["id_bien"], $row["id_reservation"], $nb_jour);
+                    echo '<div class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
+                    echo '<div class="alert alert-success mt-2" role="alert"><p> success insert enfant  </p></div>';
+                }
             } else
 
                 echo '<div class="alert alert-danger mt-2" role="alert"><p> dir chi 7araka  </p></div>';
         } else {
-            $bienx->setBien($bien, $vue, $lit, $pension, $prix, $img_bien);
-            $reservation->setReservation($idclient);
-            $row =  $chambre_res->list_bien_reservation();
-            $chambre_res->insert_bien_res($row["id_bien"], $row["id_reservation"], $nb_jour);
-            echo '<div class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
-            echo '<div class="alert alert-success mt-2" role="alert"><p> success reservation  </p></div>';
+            if ($_POST["cmp"] == 0 || $_POST["cmp"] == 1) {
+                $bienx->setBien($bien, $vue, $lit, $pension, $prix, $img_bien);
+                $reservation->setReservation($idclient);
+                $row =  $chambre_res->list_bien_reservation();
+                $chambre_res->insert_bien_res($row["id_bien"], $row["id_reservation"], $nb_jour);
+                echo '<div class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
+                echo '<div class="alert alert-success mt-2" role="alert"><p> success reservation  </p></div>';
+            } else if ($_POST["cmp"] > 1) {
+                $bienx->setBien($bien, $vue, $lit, $pension, $prix, $img_bien);
+                $row =  $chambre_res->list_bien_reservation();
+                $chambre_res->insert_bien_res($row["id_bien"], $row["id_reservation"], $nb_jour);
+                echo '<div class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
+                echo '<div class="alert alert-success mt-2" role="alert"><p> success reservation  </p></div>';
+            }
         }
     } else {
         echo '<div class="alert alert-danger mt-2" role="alert"><p>choose for reserv !! </p></div> ';
