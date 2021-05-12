@@ -8,7 +8,7 @@ class bien_reservation extends DB
 {
     public function list_bien_reservation()
     {
-        $req = " SELECT id_bien , id_reservation from bien , reservation ORDER BY id_bien DESC,id_reservation   DESC LIMIT 1 ";
+        $req = " SELECT id_bien , id_reservation , id_enfant from bien , reservation , enfant  ORDER BY id_bien DESC , id_reservation  DESC , id_enfant DESC LIMIT 1";
         $stmt = $this->connect()->query($req);
         $row = $stmt->fetch();
         return $row;

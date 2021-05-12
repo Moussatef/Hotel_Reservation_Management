@@ -37,8 +37,8 @@ if (!empty($_SESSION['ID_PClient'])) {
                     $reservation->setReservation_en($idclient, $rowE["id_enfant"]);
                     $bienx->setBien($bien, $vue, $lit, $pension, $prix, $img_bien);
                     $row =  $chambre_res->list_bien_reservation();
-                    echo '<div class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
-                    echo '<div class="alert alert-success mt-2" role="alert"><p> success insert enfant  </p></div>';
+                    echo '<div id="ssc" class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
+                    echo '<div id="ssc" class="alert alert-success mt-2" role="alert"><p> success insert enfant  </p></div>';
                     $chambre_res->insert_bien_res($row["id_bien"], $row["id_reservation"], $nb_jour);
                 } else if ($_POST["cmp"] > 1) {
                     $enfantx->insert_enfant($idclient, $nb_bambin, $nb_enfant, $nb_adulte, $select_bambin, $select_enfant, $select_adulte);
@@ -46,31 +46,31 @@ if (!empty($_SESSION['ID_PClient'])) {
                     $bienx->setBien($bien, $vue, $lit, $pension, $prix, $img_bien);
                     $row =  $chambre_res->list_bien_reservation();
                     $chambre_res->insert_bien_res($row["id_bien"], $row["id_reservation"], $nb_jour);
-                    echo '<div class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
-                    echo '<div class="alert alert-success mt-2" role="alert"><p> success insert enfant  </p></div>';
+                    echo '<div id="ssc" class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
+                    echo '<div id="ssc" class="alert alert-success mt-2" role="alert"><p> success insert enfant  </p></div>';
                 }
             } else
 
-                echo '<div class="alert alert-danger mt-2" role="alert"><p> dir chi 7araka  </p></div>';
+                echo '<div id="ssc" class="alert alert-danger mt-2" role="alert"><p> dir chi 7araka  </p></div>';
         } else {
             if ($_POST["cmp"] == 0 || $_POST["cmp"] == 1) {
                 $bienx->setBien($bien, $vue, $lit, $pension, $prix, $img_bien);
                 $reservation->setReservation($idclient);
                 $row =  $chambre_res->list_bien_reservation();
                 $chambre_res->insert_bien_res($row["id_bien"], $row["id_reservation"], $nb_jour);
-                echo '<div class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
-                echo '<div class="alert alert-success mt-2" role="alert"><p> success reservation  </p></div>';
+                echo '<div id="ssc" class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
+                echo '<div id="ssc" class="alert alert-success mt-2" role="alert"><p> success reservation  </p></div>';
             } else if ($_POST["cmp"] > 1) {
                 $bienx->setBien($bien, $vue, $lit, $pension, $prix, $img_bien);
                 $row =  $chambre_res->list_bien_reservation();
                 $chambre_res->insert_bien_res($row["id_bien"], $row["id_reservation"], $nb_jour);
-                echo '<div class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
-                echo '<div class="alert alert-success mt-2" role="alert"><p> success reservation  </p></div>';
+                echo '<div id="ssc" class="alert alert-success mt-2" role="alert"><p> success reserve bien </p></div>';
+                echo '<div id="ssc" class="alert alert-success mt-2" role="alert"><p> success reservation  </p></div>';
             }
         }
     } else {
-        echo '<div class="alert alert-danger mt-2" role="alert"><p>choose for reserv !! </p></div> ';
+        echo '<div id="ssc" class="alert alert-danger mt-2" role="alert"><p>choose for reserv !! </p></div> ';
     }
 } else {
-    echo '<div class="alert alert-danger mt-2" role="alert"><p> Login First or inscri !!!</p></div> ';
+    echo '<div id="ssc" class="alert alert-danger mt-2" role="alert"><p> Login First or inscri !!!</p></div> ';
 }

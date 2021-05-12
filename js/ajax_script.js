@@ -117,6 +117,10 @@ $(document).ready(function () {
         // window.location.href = "http://localhost/Brief5_Php/View/profil_client.php";
 
     });
+
+    // setTimeout(function () {
+    //     $('#ssc').fadeOut('fast');
+    // }, 1000);
 });
 
 
