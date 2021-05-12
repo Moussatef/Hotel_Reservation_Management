@@ -31,7 +31,7 @@ class client extends DB
 
     public function getInfoReservation($ID_personne)
     {
-        $req = "SELECT * FROM  client INNER JOIN reservation on client.id_client = reservation.id_client LEFT JOIN enfant on reservation.id_enfant=enfant.id_enfant  INNER JOIN chambre_res ON reservation.id_reservation = chambre_res.id_reservation INNER JOIN bien ON chambre_res.id_bien = bien.id_bien where client.id_personne = ? ";
+        $req = "SELECT * FROM  client INNER JOIN reservation on client.id_client = reservation.id_client LEFT JOIN enfent_reservation ON  reservation.id_reservation  = enfent_reservation.id_reservation  LEFT JOIN enfant on enfent_reservation.id_enfant = enfant.id_enfant  INNER JOIN chambre_res ON reservation.id_reservation = chambre_res.id_reservation INNER JOIN bien ON chambre_res.id_bien = bien.id_bien where client.id_personne = ? ";
         $stmt = $this->connect()->prepare($req);
         $stmt->execute([$ID_personne]);
         $rows = $stmt->fetchAll();
