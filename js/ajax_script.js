@@ -108,9 +108,9 @@ $(document).ready(function () {
         $("#pension").val("Null");
         $("#NB_Jour").val("1");
         $("#prix").val("0");
-        $("#NB_bambin").val("Null");
-        $("#NB_enfant").val("Null");
-        $("#NB_adulte").val("Null");
+        $("#NB_bambin").val("");
+        $("#NB_enfant").val("");
+        $("#NB_adulte").val("");
         $("#select_bambin").val("Null");
         $("#select_enfant").val("Null");
         $("#select_adulte").val("Null");

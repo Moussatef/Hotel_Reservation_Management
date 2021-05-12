@@ -12,6 +12,7 @@ class reservation extends DB
         $stmt = $this->connect()->prepare($req) or die(print_r($stmt->errorInfo()));
         $stmt->execute([$idclient]);
     }
+
     public function setReservation_en($id_reservation, $id_enfant)
     {
         $req = "INSERT INTO enfant_reservation(id_reservation,id_enfant) values (?,?)";
