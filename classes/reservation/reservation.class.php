@@ -12,11 +12,11 @@ class reservation extends DB
         $stmt = $this->connect()->prepare($req) or die(print_r($stmt->errorInfo()));
         $stmt->execute([$idclient]);
     }
-    public function setReservation_en($idclient, $id_enfant)
+    public function setReservation_en($id_reservation, $id_enfant)
     {
-        $req = "INSERT INTO reservation(id_client,id_enfant) values (?,?)";
+        $req = "INSERT INTO enfant_reservation(id_reservation,id_enfant) values (?,?)";
         $stmt = $this->connect()->prepare($req) or die(print_r($stmt->errorInfo()));
-        $stmt->execute([$idclient, $id_enfant]);
+        $stmt->execute([$id_reservation, $id_enfant]);
     }
 
     public function getLastreserv($idclient)
