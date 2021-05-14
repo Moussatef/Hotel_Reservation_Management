@@ -46,7 +46,7 @@ if (!empty($_SESSION['ID_PClient'])) {
 
                     $bienx->setBien($bien, $vue, $lit, $pension, $prix, $img_bien);
                     $enfantx->insert_enfant($idclient, $nb_bambin, $nb_enfant, $nb_adulte, $select_bambin, $select_enfant, $select_adulte);
-
+                    $reservation->setReservation($idclient);
                     $rowE = $enfantx->getLastEnfant($idclient);
                     $row =  $chambre_res->list_bien_reservation();
 
