@@ -44,8 +44,8 @@ $(document).ready(function () {
             }
         })
         $("#bien").val("Null")
-        $("#Lit").val("Null");
-        $("#Vue").val("Null");
+        $("#Lit").hide();
+        $("#Vue").hide();
         $("#pension").val("Null");
         $("#NB_Jour").val("1");
         $("#prix").val("0");
@@ -103,8 +103,8 @@ $(document).ready(function () {
             }
         })
         $("#bien").val("Null")
-        $("#Lit").val("Null");
-        $("#Vue").val("Null");
+        $("#Lit").hide();
+        $("#Vue").hide();
         $("#pension").val("Null");
         $("#NB_Jour").val("1");
         $("#prix").val("0");
