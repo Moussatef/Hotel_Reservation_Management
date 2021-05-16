@@ -50,24 +50,21 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                             <div class="col-lg-12 mt-3">
                                 <div class="row">
                                     <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 18rem;">
-                                        <div class="card-header">Header</div>
+                                        <div class="card-header bg-transparent border-success">N°_Client</div>
                                         <div class="card-body">
-                                            <h5 class="card-title">Info card title</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h2 class="card-title text-center">45</h2>
                                         </div>
                                     </div>
                                     <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 18rem;">
-                                        <div class="card-header">Header</div>
+                                        <div class="card-header bg-transparent border-success">N°_Reservation</div>
                                         <div class="card-body">
-                                            <h5 class="card-title">Info card title</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h2 class="card-title text-center">160</h2>
                                         </div>
                                     </div>
                                     <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 18rem;">
-                                        <div class="card-header">Header</div>
+                                        <div class="card-header bg-transparent border-success">Total achievement </div>
                                         <div class="card-body">
-                                            <h5 class="card-title">Info card title</h5>
-                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <h2 class="card-title text-center">490000 DH</h2>
                                         </div>
                                     </div>
                                 </div>
