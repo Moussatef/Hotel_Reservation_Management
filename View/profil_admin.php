@@ -14,6 +14,9 @@ if (!empty($_SESSION["ID_PAdmin"])) {
     $bien = new bien;
     $row1 = $personne->getInfoPersonnel($_SESSION["ID_PAdmin"]);
     $rows = $bien->getInfoReservation();
+    $nb_client = $admin->getNbClient();
+    $nb_reservation = $admin->getNB_reservation();
+    $total_dh = $admin->getTotalDH();
 }
 ?>
 <!DOCTYPE html>
@@ -52,19 +55,19 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                                     <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 18rem;">
                                         <div class="card-header bg-transparent border-success">N°_Client</div>
                                         <div class="card-body">
-                                            <h2 class="card-title text-center">45</h2>
+                                            <h2 class="card-title text-center"><?php echo $nb_client["NB"]; ?></h2>
                                         </div>
                                     </div>
                                     <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 18rem;">
                                         <div class="card-header bg-transparent border-success">N°_Reservation</div>
                                         <div class="card-body">
-                                            <h2 class="card-title text-center">160</h2>
+                                            <h2 class="card-title text-center"><?php echo $nb_reservation["NB"]; ?></h2>
                                         </div>
                                     </div>
                                     <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 18rem;">
                                         <div class="card-header bg-transparent border-success">Total achievement </div>
                                         <div class="card-body">
-                                            <h2 class="card-title text-center">490000 DH</h2>
+                                            <h2 class="card-title text-center"><?php echo $total_dh["DH"]; ?> DH</h2>
                                         </div>
                                     </div>
                                 </div>
