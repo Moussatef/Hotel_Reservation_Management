@@ -17,6 +17,7 @@ if (!empty($_SESSION["ID_PAdmin"])) {
     $nb_client = $admin->getNbClient();
     $nb_reservation = $admin->getNB_reservation();
     $total_dh = $admin->getTotalDH();
+    $info_client = $admin->get_client();
 }
 ?>
 <!DOCTYPE html>
@@ -53,7 +54,7 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                             <div class="col-lg-12 mt-3">
                                 <div class="row">
                                     <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 18rem;">
-                                        <div class="card-header bg-transparent border-success">N°_Client</div>
+                                        <div class="card-header bg-transparent border-success"><a class="line " href="">N°_Client</a> </div>
                                         <div class="card-body">
                                             <h2 class="card-title text-center"><?php echo $nb_client["NB"]; ?></h2>
                                         </div>
@@ -84,6 +85,30 @@ if (!empty($_SESSION["ID_PAdmin"])) {
 
     <div class="container mt-4 ">
         <div class="row row-cols-md-2 g-5 mt-4 ">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <table class="table table-striped">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Email</th>
+                        <th>Date Inscription</th>
+                    </tr>
+                    <?php
+                    foreach ($info_client as $row) {
+                    ?>
+                        <tr>
+                            <td><?php echo $row["id_client"]; ?></td>
+                            <td><?php echo $row["Nom"]; ?></td>
+                            <td><?php echo $row["Prenom"]; ?></td>
+                            <td><?php echo $row["Email"]; ?></td>
+                            <td><?php echo $row["Date_inscr"]; ?></td>
+                        </tr>
+                    <?php
+
+                    } ?>
+                </table>
+            </div>
             <?php
             foreach ($rows as $row) {
                 if ($row["archive"] == 0) { ?>

@@ -29,4 +29,11 @@ class admin extends DB
         $row = $stmt->fetch();
         return $row;
     }
+    public function get_client()
+    {
+        $req = "SELECT * FROM personne INNER JOIN client ON personne.id_personne = client.id_personne";
+        $stmt = $this->connect()->query($req);
+        $row = $stmt->fetchAll();
+        return $row;
+    }
 }
