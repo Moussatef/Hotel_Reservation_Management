@@ -159,9 +159,11 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                 </div>
                 <hr>
             </div>
+            <h3 class="col-lg-12">Reservation No Valider</h3>
+            <hr class="col-lg-12">
             <?php
             foreach ($rows as $row) {
-                if ($row["archive"] == 0) { ?>
+                if ($row["archive"] == 0 && $row["valide"] == 0) { ?>
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
                         <div class="card w-75">
                             <img src="<?php echo $row["img"]; ?>" width="250px" height="250px" class="card-img-top" alt="">
@@ -180,8 +182,44 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                                 </div>
                                 <hr>
                                 <a href="../controller/controller.php?deladm= <?php echo $row["id_bien"]; ?>" class="btn rounded-pill btn-danger float-end ms-2"><i class="fas fa-trash"></i></a>
-                                <a href="../controller/controller.php?valide= <?php echo $row["id_bien"]; ?>" class="btn rounded-pill btn-danger float-end ms-2"><i class="far fa-check-circle"></i></a>
-                                <a href="../controller/controller.php?vald= <?php echo $row["id_bien"]; ?>" class="btn rounded-pill btn-success float-end"><i class="far fa-check-circle"></i></a>
+                                <a href="../controller/controller.php?valide= <?php echo $row["id_bien"]; ?>" class="btn rounded-pill btn-success float-end ms-2"><i class="far fa-check-circle"></i></a>
+                                <a class="btn btn-primary rounded-pill" data-bs-toggle="collapse" href="#collapseExample<?php echo $row["id_bien"]; ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <i class="far fa-caret-square-down"></i></a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Date reservation <?php echo $row["date_reserver"]; ?> </small>
+                            </div>
+                        </div>
+                    </div>
+            <?php
+                }
+            } ?>
+            <h3 class="col-lg-12">Reservation Valider</h3>
+            <hr class="col-lg-12">
+            <?php
+            foreach ($rows as $row) {
+                if ($row["archive"] == 0 && $row["valide"] == 1) { ?>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                        <div class="card w-75">
+                            <img src="<?php echo $row["img"]; ?>" width="250px" height="250px" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Bien Info</h5>
+                                <span class="badge rounded-pill bg-secondary float-end">VALIDER</span>
+                                <hr>
+                                <p class="card-text"><b>Client :</b> <?php echo $row["Nom"] . " " .  $row["Prenom"]; ?> </p>
+                                <p class="card-text"><b>Email :</b> <?php echo $row["Email"]; ?> </p>
+                                <div class="collapse" id="collapseExample<?php echo $row["id_bien"]; ?>">
+                                    <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Type"]; ?></p>
+                                    <p class="card-text"><b>Type de lit :</b> <?php echo $row["Type_Lit"]; ?></p>
+                                    <p class="card-text"><b>Type vue :</b> <?php echo $row["Type_Vue"]; ?></p>
+                                    <p class="card-text"><b>Type pension :</b> <?php echo $row["Type_Pension"]; ?></p>
+                                    <p class="card-text"><b>Prix :</b> <?php echo $row["PRIX"]; ?> </p>
+                                    <p class="card-text"><b>Nombre des Jours :</b> <?php echo $row["NB_Jour"]; ?></p>
+                                </div>
+                                <hr>
+                                <a href="../controller/controller.php?deladm= <?php echo $row["id_bien"]; ?>" class="btn rounded-pill btn-danger float-end ms-2"><i class="fas fa-trash"></i></a>
+
+
                                 <a class="btn btn-primary rounded-pill" data-bs-toggle="collapse" href="#collapseExample<?php echo $row["id_bien"]; ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <i class="far fa-caret-square-down"></i></a>
                             </div>

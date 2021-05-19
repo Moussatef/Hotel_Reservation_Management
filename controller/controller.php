@@ -61,3 +61,9 @@ if (isset($_GET["update"])) {
     $bien->update_bien($id_bien);
     header('Location:../View/profil_admin.php');
 }
+
+if (isset($_GET["valide"])) {
+    $id_bien = $_GET["valide"];
+    $bien->valider_bien($id_bien);
+    header('Location:../View/profil_admin.php');
+}

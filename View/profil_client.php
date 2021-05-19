@@ -68,12 +68,14 @@ if (!empty($_SESSION["ID_PClient"])) {
                             <img src="<?php echo $row["img"] ?> " width="250px" height="250px" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Bien Info</h5>
+
+                                <span class="badge rounded-pill bg-warning  float-end">NO VALIDER</span>
                                 <hr>
                                 <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Type"] ?></p>
                                 <p class="card-text"><b>Type de lit :</b> <?php echo $row["Type_Lit"] ?></p>
                                 <p class="card-text"><b>Type vue :</b> <?php echo $row["Type_Vue"] ?></p>
                                 <p class="card-text"><b>Type pension :</b> <?php echo $row["Type_Pension"] ?></p>
-                                <p class="card-text"><b>Prix :</b> <?php echo $row["PRIX"] ?></p>
+                                <p class="card-text"><b>Prix :</b> <?php echo $row["PRIX"] ?> DH</p>
                                 <p class="card-text"><b>Nombre des Jours :</b> <?php echo $row["NB_Jour"] ?></p>
                                 <hr>
                                 <?php if (!empty($row["id_enfant"])) { ?>
@@ -93,6 +95,44 @@ if (!empty($_SESSION["ID_PClient"])) {
                         </div>
                     </div>
             <?php }
+            } ?>
+            <h3 class="col-lg-12">Reservation Valider</h3>
+            <hr class="col-lg-12">
+            <?php
+            foreach ($row2 as $row) {
+                if ($row["archive"] == 0 && $row["valide"] == 1) { ?>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                        <div class="card w-65">
+                            <img src="<?php echo $row["img"]; ?>" width="250px" height="250px" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Bien Info</h5>
+
+                                <span class="badge rounded-pill bg-primary float-end">VALIDER</span>
+                                <hr>
+                                <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Type"] ?></p>
+                                <p class="card-text"><b>Type de lit :</b> <?php echo $row["Type_Lit"] ?></p>
+                                <p class="card-text"><b>Type vue :</b> <?php echo $row["Type_Vue"] ?></p>
+                                <p class="card-text"><b>Type pension :</b> <?php echo $row["Type_Pension"] ?></p>
+                                <p class="card-text"><b>Prix :</b> <?php echo $row["PRIX"] ?> DH</p>
+                                <p class="card-text"><b>Nombre des Jours :</b> <?php echo $row["NB_Jour"] ?></p>
+                                <hr>
+                                <?php if (!empty($row["id_enfant"])) { ?>
+                                    <h5 class="card-title">Enfant info</h5>
+                                    <p class="card-text"><b>N°_ Bambin :</b> <?php echo $row["bambin"] ?><b> / Choix :</b> <?php echo $row["bambin_choix"] ?></p>
+                                    <p class="card-text"><b>N°_ Enfant :</b> <?php echo $row["enfant"] ?> <b> / Choix :</b><?php echo $row["enfant_choix"] ?></p>
+                                    <p class="card-text"><b>N°_ Adulte :</b> <?php echo $row["adulte"] ?><b> / Choix :</b> <?php echo $row["adulte_choix"] ?></p>
+                                    <hr>
+                                <?php } ?>
+                                <a href="../controller/controller.php?deladm= <?php echo $row["id_bien"]; ?>" class="btn rounded-pill btn-danger float-end ms-2"><i class="fas fa-trash"></i></a>
+
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Date reservation <?php echo $row["date_reserver"]; ?> </small>
+                            </div>
+                        </div>
+                    </div>
+            <?php
+                }
             } ?>
         </div>
 
