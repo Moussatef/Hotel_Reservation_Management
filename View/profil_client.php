@@ -106,7 +106,6 @@ if (!empty($_SESSION["ID_PClient"])) {
                             <img src="<?php echo $row["img"]; ?>" width="250px" height="250px" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Bien Info</h5>
-
                                 <span class="badge rounded-pill bg-primary float-end">VALIDER</span>
                                 <hr>
                                 <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Type"] ?></p>
@@ -124,7 +123,6 @@ if (!empty($_SESSION["ID_PClient"])) {
                                     <hr>
                                 <?php } ?>
                                 <a href="../controller/controller.php?deladm= <?php echo $row["id_bien"]; ?>" class="btn rounded-pill btn-danger float-end ms-2"><i class="fas fa-trash"></i></a>
-
                             </div>
                             <div class="card-footer">
                                 <small class="text-muted">Date reservation <?php echo $row["date_reserver"]; ?> </small>
