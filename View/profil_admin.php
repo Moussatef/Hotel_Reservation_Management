@@ -180,6 +180,7 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                                 </div>
                                 <hr>
                                 <a href="../controller/controller.php?deladm= <?php echo $row["id_bien"]; ?>" class="btn rounded-pill btn-danger float-end ms-2"><i class="fas fa-trash"></i></a>
+                                <a href="../controller/controller.php?valide= <?php echo $row["id_bien"]; ?>" class="btn rounded-pill btn-danger float-end ms-2"><i class="far fa-check-circle"></i></a>
                                 <a href="../controller/controller.php?vald= <?php echo $row["id_bien"]; ?>" class="btn rounded-pill btn-success float-end"><i class="far fa-check-circle"></i></a>
                                 <a class="btn btn-primary rounded-pill" data-bs-toggle="collapse" href="#collapseExample<?php echo $row["id_bien"]; ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <i class="far fa-caret-square-down"></i></a>

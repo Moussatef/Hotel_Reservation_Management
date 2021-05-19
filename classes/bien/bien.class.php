@@ -33,4 +33,10 @@ class bien extends DB
         $stmt = $this->connect()->prepare($req);
         $stmt->execute([$id_bien]);
     }
+    public function valider_bien($id_bien)
+    {
+        $req = "UPDATE bien SET valide = 1 WHERE id_bien = ?";
+        $stmt = $this->connect()->prepare($req);
+        $stmt->execute([$id_bien]);
+    }
 }
