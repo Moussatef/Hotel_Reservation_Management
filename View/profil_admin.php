@@ -18,6 +18,7 @@ if (!empty($_SESSION["ID_PAdmin"])) {
     $nb_reservation = $admin->getNB_reservation();
     $total_dh = $admin->getTotalDH();
     $info_client = $admin->get_client();
+    $nb_trach = $admin->get_Nb_Trach();
 }
 ?>
 <!DOCTYPE html>
@@ -53,22 +54,28 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                             </div>
                             <div class="col-lg-12 mt-3">
                                 <div class="row">
-                                    <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 18rem;">
-                                        <div class="card-header bg-transparent border-success"><a class="line " href="">N°_Client</a> </div>
+                                    <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 8rem;">
+                                        <div class="card-header bg-transparent border-success"><a data-bs-toggle="collapse" href="#collapseTB" role="button" aria-expanded="false" aria-controls="collapseTB">N°_Client</a> </div>
                                         <div class="card-body">
                                             <h2 class="card-title text-center"><?php echo $nb_client["NB"]; ?></h2>
                                         </div>
                                     </div>
-                                    <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 18rem;">
+                                    <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 15rem;">
                                         <div class="card-header bg-transparent border-success">N°_Reservation</div>
                                         <div class="card-body">
                                             <h2 class="card-title text-center"><?php echo $nb_reservation["NB"]; ?></h2>
                                         </div>
                                     </div>
-                                    <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 18rem;">
+                                    <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 15rem;">
                                         <div class="card-header bg-transparent border-success">Total achievement </div>
                                         <div class="card-body">
                                             <h2 class="card-title text-center"><?php echo $total_dh["DH"]; ?> DH</h2>
+                                        </div>
+                                    </div>
+                                    <div class="card border-info col-lg-4 ms-3 mb-3" style="max-width: 8rem;">
+                                        <div class="card-header bg-transparent border-success"><a data-bs-toggle="collapse" href="#collapseTR" role="button" aria-expanded="false" aria-controls="collapseTB">Trach</a> </div>
+                                        <div class="card-body">
+                                            <h2 class="card-title text-center"> <?php echo $nb_trach["trach"]; ?></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -85,29 +92,70 @@ if (!empty($_SESSION["ID_PAdmin"])) {
 
     <div class="container mt-4 ">
         <div class="row row-cols-md-2 g-5 mt-4 ">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <table class="table table-striped">
-                    <tr>
-                        <th>ID</th>
-                        <th>Nom</th>
-                        <th>Prenom</th>
-                        <th>Email</th>
-                        <th>Date Inscription</th>
-                    </tr>
-                    <?php
-                    foreach ($info_client as $row) {
-                    ?>
+            <div class="col-lg-12 col-md-12 col-sm-12 ">
+                <div class="collapse" id="collapseTB">
+                    <h3 class="mb-3">Table Client Information </h3>
+                    <table class="table table-striped">
                         <tr>
-                            <td><?php echo $row["id_client"]; ?></td>
-                            <td><?php echo $row["Nom"]; ?></td>
-                            <td><?php echo $row["Prenom"]; ?></td>
-                            <td><?php echo $row["Email"]; ?></td>
-                            <td><?php echo $row["Date_inscr"]; ?></td>
+                            <th>ID</th>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Email</th>
+                            <th>Date Inscription</th>
                         </tr>
-                    <?php
+                        <?php
+                        foreach ($info_client as $row) {
+                        ?>
+                            <tr>
+                                <td><?php echo $row["id_client"]; ?></td>
+                                <td><?php echo $row["Nom"]; ?></td>
+                                <td><?php echo $row["Prenom"]; ?></td>
+                                <td><?php echo $row["Email"]; ?></td>
+                                <td><?php echo $row["Date_inscr"]; ?></td>
+                            </tr>
+                        <?php
 
+                        } ?>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 collapse " id="collapseTR">
+                <h3>Trach </h3>
+                <div class="row">
+
+                    <?php
+                    foreach ($rows as $row) {
+                        if ($row["archive"] == 1) { ?>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+                                <div class="card w-75">
+                                    <img src="<?php echo $row["img"]; ?>" width="250px" height="250px" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bien Info</h5>
+                                        <hr>
+                                        <p class="card-text"><b>Client :</b> <?php echo $row["Nom"] . " " .  $row["Prenom"]; ?> </p>
+                                        <p class="card-text"><b>Email :</b> <?php echo $row["Email"]; ?> </p>
+                                        <div class="collapse" id="collapseExample<?php echo $row["id_bien"]; ?>">
+                                            <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Type"]; ?></p>
+                                            <p class="card-text"><b>Type de lit :</b> <?php echo $row["Type_Lit"]; ?></p>
+                                            <p class="card-text"><b>Type vue :</b> <?php echo $row["Type_Vue"]; ?></p>
+                                            <p class="card-text"><b>Type pension :</b> <?php echo $row["Type_Pension"]; ?></p>
+                                            <p class="card-text"><b>Prix :</b> <?php echo $row["PRIX"]; ?> </p>
+                                            <p class="card-text"><b>Nombre des Jours :</b> <?php echo $row["NB_Jour"]; ?></p>
+                                        </div>
+                                        <hr>
+                                        <a class="btn btn-primary rounded-pill" data-bs-toggle="collapse" href="#collapseExample<?php echo $row["id_bien"]; ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            <i class="far fa-caret-square-down"></i></a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted">Date reservation <?php echo $row["date_reserver"]; ?> </small>
+                                    </div>
+                                </div>
+                            </div>
+                    <?php
+                        }
                     } ?>
-                </table>
+                </div>
+                <hr>
             </div>
             <?php
             foreach ($rows as $row) {

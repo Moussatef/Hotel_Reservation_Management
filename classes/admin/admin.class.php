@@ -36,4 +36,11 @@ class admin extends DB
         $row = $stmt->fetchAll();
         return $row;
     }
+    public function get_Nb_Trach()
+    {
+        $req = "SELECT COUNT(bien.archive) AS trach FROM bien WHERE bien.archive = 1";
+        $stmt = $this->connect()->query($req);
+        $row = $stmt->fetch();
+        return $row;
+    }
 }
