@@ -143,6 +143,8 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                                             <p class="card-text"><b>Nombre des Jours :</b> <?php echo $row["NB_Jour"]; ?></p>
                                         </div>
                                         <hr>
+
+                                        <a href="../controller/controller.php?update= <?php echo $row["id_bien"]; ?>" class="btn rounded-pill btn-danger float-end ms-2"><i class="fas fa-trash"></i></a>
                                         <a class="btn btn-primary rounded-pill" data-bs-toggle="collapse" href="#collapseExample<?php echo $row["id_bien"]; ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
                                             <i class="far fa-caret-square-down"></i></a>
                                     </div>

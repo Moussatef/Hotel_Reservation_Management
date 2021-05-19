@@ -55,3 +55,9 @@ if (isset($_GET["deladm"])) {
     $bien->doDelete($id_bien);
     header('Location:../View/profil_admin.php');
 }
+
+if (isset($_GET["update"])) {
+    $id_bien = $_GET["update"];
+    $bien->update_bien($id_bien);
+    header('Location:../View/profil_admin.php');
+}

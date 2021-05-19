@@ -27,4 +27,10 @@ class bien extends DB
         $stmt = $this->connect()->prepare($req) or die(print_r($stmt->errorInfo()));
         $stmt->execute([$type_bien, $lit, $vue, $pension, $img, $prix]);
     }
+    public function update_bien($id_bien)
+    {
+        $req = "UPDATE bien SET archive = 0 WHERE id_bien = ?";
+        $stmt = $this->connect()->prepare($req);
+        $stmt->execute([$id_bien]);
+    }
 }
