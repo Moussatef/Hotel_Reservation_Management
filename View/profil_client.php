@@ -62,7 +62,7 @@ if (!empty($_SESSION["ID_PClient"])) {
         <div class="row ms-3  mt-4 ">
             <?php
             foreach ($row2 as $row) {
-                if ($row["archive"] == 0) { ?>
+                if ($row["archive"] == 0 && $row["valide"] == 0) { ?>
                     <div class="col-lg-4 col-md-6 col-sm-12 mb-5 ">
                         <div class="card w-65">
                             <img src="<?php echo $row["img"] ?> " width="250px" height="250px" class="card-img-top" alt="">
