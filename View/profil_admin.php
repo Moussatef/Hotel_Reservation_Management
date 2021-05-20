@@ -160,7 +160,7 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                 </div>
                 <hr>
             </div>
-            <h3 class="col-lg-12">Reservation No Valider</h3>
+            <h3 class="col-lg-12">Réservation non Validée</h3>
             <hr class="col-lg-12">
             <?php
             foreach ($rows as $row) {
@@ -196,7 +196,7 @@ if (!empty($_SESSION["ID_PAdmin"])) {
             <?php
                 }
             } ?>
-            <h3 class="col-lg-12">Reservation Valider</h3>
+            <h3 class="col-lg-12">Réservation Validée</h3>
             <hr class="col-lg-12">
             <?php
             foreach ($rows as $row) {
