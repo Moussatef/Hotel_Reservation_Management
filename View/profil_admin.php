@@ -170,7 +170,7 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                             <img src="<?php echo $row["img"]; ?>" width="250px" height="250px" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Bien Info</h5>
-                                <span class="badge rounded-pill bg-warning  float-end">NO VALIDER</span>
+                                <span class="badge rounded-pill bg-warning  float-end ">NON VALIDÉE</span>
                                 <hr>
                                 <p class="card-text"><b>Client :</b> <?php echo $row["Nom"] . " " .  $row["Prenom"]; ?> </p>
                                 <p class="card-text"><b>Email :</b> <?php echo $row["Email"]; ?> </p>
@@ -206,7 +206,7 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                             <img src="<?php echo $row["img"]; ?>" width="250px" height="250px" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Bien Info</h5>
-                                <span class="badge rounded-pill bg-secondary float-end">VALIDER</span>
+                                <span class="badge rounded-pill bg-secondary float-end">VALIDÉE</span>
                                 <hr>
                                 <p class="card-text"><b>Client :</b> <?php echo $row["Nom"] . " " .  $row["Prenom"]; ?> </p>
                                 <p class="card-text"><b>Email :</b> <?php echo $row["Email"]; ?> </p>
