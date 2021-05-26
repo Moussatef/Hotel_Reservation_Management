@@ -27,7 +27,7 @@ var total = 0;
 function chick_bien() {
 
     switch (bien.value) {
-        case "chambre double": div_lit.innerHTML = `
+        case "1": div_lit.innerHTML = `
                                             <label for="Lit" class="form-label">Type De Lit</label>
                                             <select class="form-select" name="Lit" onchange="chick_lit()" id="Lit" required>
                                                 <option value="Null" selected hidden>Choose...</option>
@@ -47,7 +47,7 @@ function chick_bien() {
 
 
             break;
-        case "chambre simple":
+        case "2":
             Div_Vue.innerHTML = "<hr class='my-4>' "
             div_lit.innerHTML = `<label for="Vue" class="form-label">Type De Vue</label>
                                             <select  onchange="chick_vue()" name="Vue" class="form-select" id="Vue" required>
@@ -58,7 +58,7 @@ function chick_bien() {
                                             <div class="invalid-feedback">
                                                 Please select a valid Vue.
                                             </div>`
-            chamber_desc.innerText = "Chambre simple"
+            chamber_desc.innerText = "3"
             img_Bine.src = "../img/h3.jpg";
             prix_chambre = prix_chambr_simple;
             totalprix()
@@ -66,7 +66,7 @@ function chick_bien() {
             A_enfant.removeAttribute("disabled")
             document.getElementById("Demi").removeAttribute("disabled")
             break;
-        case "Appartement":
+        case "3":
             chamber_desc.innerText = "Appartement"
             img_Bine.src = "../img/pt.jpg";
             div_lit.innerHTML = div_Vue.innerHTML = "<hr class='my-4>' "
@@ -76,7 +76,7 @@ function chick_bien() {
             A_enfant.setAttribute("disabled", "true");
             document.getElementById("Demi").setAttribute("disabled", "true");
             break;
-        case "bungalow":
+        case "4":
             chamber_desc.innerText = "Bungalow"
             img_Bine.src = "../img/bn.jpg";
             prix_chambre = 1400;

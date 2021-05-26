@@ -83,11 +83,11 @@ require '../includs/autoload.inc.php'; ?>
                             <div class="col-sm-6">
                                 <label for="bine" class="form-label">Bien</label>
                                 <select class="form-select" name="bien" onchange="chick_bien()" value="" id="bien" required>
-                                    <option value="Null" selected hidden>Choose...</option>
-                                    <option value="chambre double">chambre double</option>
-                                    <option value="chambre simple">chambre simple</option>
-                                    <option value="Appartement">Appartement</option>
-                                    <option value="bungalow">bungalow</option>
+                                    <option value="0" selected hidden>Choose...</option>
+                                    <option value="1">chambre double</option>
+                                    <option value="2">chambre simple</option>
+                                    <option value="3">Appartement</option>
+                                    <option value="4">bungalow</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select a valid country.
