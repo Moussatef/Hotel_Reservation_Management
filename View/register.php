@@ -49,9 +49,29 @@
 
     </div>
     </div>
-
     </div>
     <?php include '../includs/footer.php'; ?>
+    <script>
+        var nom = document.getElementById("nom");
+
+        function verf_Nom() {
+            if (nom.value.length > 3) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var Pnom = document.getElementById("Prenom");
+
+        function verf_Nom() {
+
+            if (Pnom.value.length > 3) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
     <script src="../js/bootstrap.js"></script>
 </body>
 
