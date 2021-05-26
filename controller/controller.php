@@ -21,7 +21,7 @@ if (isset($_POST["Name"])) {
 
 
     $client->insert_personne($name, $f_name, $email, $password);
-    header('Location:login.php');
+    header('Location: ../View/login.php');
 }
 
 if (isset($_POST["email_auto"])) {

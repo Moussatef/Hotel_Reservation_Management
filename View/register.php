@@ -18,32 +18,32 @@
             <h1>Sign Up</h1>
             <h2>Hello! let's get started</h2>
             <h4>Sign up to continue.</h4>
-            <form action="controller.php" method='POST'>
+            <form action="../controller/controller.php" method='POST'>
                 <div class="mb-3 row">
                     <label for="Name" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="Name" id="Name" placeholder="Name">
+                        <input type="text" class="form-control" name="Name" id="nom" placeholder="Name">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="First_Name" class="col-sm-2 col-form-label">First Name</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="f_name" id="First_Name" placeholder="First Name">
+                        <input type="text" class="form-control" name="f_name" id="Prenom" placeholder="First Name">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="email" id="staticEmail" placeholder="email@example.com">
+                        <input type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}$" name="email" id="staticEmail" placeholder="email@example.com">
                     </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password">
+                        <input type="password" class="form-control" pattern="[a-z0-9._%+-@]{4,20}$" name="password" id="inputPassword" placeholder="Password">
                     </div>
                 </div>
-                <input type="submit" value="save" class="w-100 btn btn-primary btn-md">
+                <input type="botton" value="save" class="w-100 btn btn-primary btn-md">
             </form>
         </div>
 

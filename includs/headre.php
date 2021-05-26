@@ -5,7 +5,7 @@ if (isset($_GET['logout'])) {
 }
 ?>
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-light   fixed-top bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">MS Hotel </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,9 +19,7 @@ if (isset($_GET['logout'])) {
                     <li class="nav-item">
                         <a class="nav-link" href="reservation_page.php">Resirvation</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
+
                 </ul>
                 <div class="col-md-9 text-end ">
                     <?php if (!empty(@$_SESSION["ID_PClient"] || !empty(@$_SESSION["ID_PAdmin"]))) { ?>
