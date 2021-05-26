@@ -71,7 +71,7 @@ if (!empty($_SESSION["ID_PClient"])) {
 
                                 <span class="badge rounded-pill bg-warning  float-end">NO VALIDER</span>
                                 <hr>
-                                <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Type"] ?></p>
+                                <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Bien"] ?></p>
                                 <p class="card-text"><b>Type de lit :</b> <?php echo $row["Type_Lit"] ?></p>
                                 <p class="card-text"><b>Type vue :</b> <?php echo $row["Type_Vue"] ?></p>
                                 <p class="card-text"><b>Type pension :</b> <?php echo $row["Type_Pension"] ?></p>
@@ -108,7 +108,7 @@ if (!empty($_SESSION["ID_PClient"])) {
                                 <h5 class="card-title">Bien Info</h5>
                                 <span class="badge rounded-pill bg-primary float-end">VALIDER</span>
                                 <hr>
-                                <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Type"] ?></p>
+                                <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Bien"] ?></p>
                                 <p class="card-text"><b>Type de lit :</b> <?php echo $row["Type_Lit"] ?></p>
                                 <p class="card-text"><b>Type vue :</b> <?php echo $row["Type_Vue"] ?></p>
                                 <p class="card-text"><b>Type pension :</b> <?php echo $row["Type_Pension"] ?></p>

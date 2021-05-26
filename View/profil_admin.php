@@ -136,7 +136,7 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                                         <p class="card-text"><b>Client :</b> <?php echo $row["Nom"] . " " .  $row["Prenom"]; ?> </p>
                                         <p class="card-text"><b>Email :</b> <?php echo $row["Email"]; ?> </p>
                                         <div class="collapse" id="collapseExample<?php echo $row["id_bien"]; ?>">
-                                            <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Type"]; ?></p>
+                                            <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Bien"]; ?></p>
                                             <p class="card-text"><b>Type de lit :</b> <?php echo $row["Type_Lit"]; ?></p>
                                             <p class="card-text"><b>Type vue :</b> <?php echo $row["Type_Vue"]; ?></p>
                                             <p class="card-text"><b>Type pension :</b> <?php echo $row["Type_Pension"]; ?></p>
@@ -175,7 +175,7 @@ if (!empty($_SESSION["ID_PAdmin"])) {
                                 <p class="card-text"><b>Client :</b> <?php echo $row["Nom"] . " " .  $row["Prenom"]; ?> </p>
                                 <p class="card-text"><b>Email :</b> <?php echo $row["Email"]; ?> </p>
                                 <div class="collapse" id="collapseExample<?php echo $row["id_bien"]; ?>">
-                                    <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Type"]; ?></p>
+                                    <p class="card-text"><b>Bien :</b> <?php echo $row["Nom_Bien"]; ?></p>
                                     <p class="card-text"><b>Type de lit :</b> <?php echo $row["Type_Lit"]; ?></p>
                                     <p class="card-text"><b>Type vue :</b> <?php echo $row["Type_Vue"]; ?></p>
                                     <p class="card-text"><b>Type pension :</b> <?php echo $row["Type_Pension"]; ?></p>

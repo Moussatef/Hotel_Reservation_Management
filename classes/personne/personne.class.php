@@ -9,7 +9,7 @@ class personne extends DB
 
     public function getClient($ID_personne)
     {
-        $req = "SELECT * FROM personne INNER JOIN client on personne.id_personne = client.id_personne INNER JOIN reservation on client.id_client = reservation.id_client INNER JOIN chambre_res on reservation.id_reservation = chambre_res.id_reservation INNER JOIN bien on chambre_res.id_bien = bien.id_bien where personne.id_personne = ? ";
+        $req = "SELECT * FROM personne INNER JOIN client on personne.id_personne = client.id_personne INNER JOIN reservation on client.id_client = reservation.id_client INNER JOIN chambre_res on reservation.id_reservation = chambre_res.id_reservation INNER JOIN bien on chambre_res.id_bien = bien.id_bien INNER JOIN bien_ ON bien.ID_Bien_info = bein.ID_Bien where personne.id_personne = ? ";
         $stmt = $this->connect()->prepare($req);
         $stmt->execute([$ID_personne]);
         $row = $stmt->fetch();
