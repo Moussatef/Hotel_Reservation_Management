@@ -51,7 +51,7 @@
     </div>
     </div>
     <?php include '../includs/footer.php'; ?>
-    <script>
+    <!-- <script>
         var nom = document.getElementById("nom");
 
         function verf_Nom() {
@@ -71,7 +71,7 @@
                 return false;
             }
         }
-    </script>
+    </script> -->
     <script src="../js/bootstrap.js"></script>
 </body>
 

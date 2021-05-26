@@ -122,7 +122,6 @@ require '../includs/autoload.inc.php'; ?>
                             <div class="col-12" id="Div_Enfant">
 
 
-
                             </div>
                             <hr class="my-4">
                             <div class="col-12">
