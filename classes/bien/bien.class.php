@@ -16,7 +16,7 @@ class bien extends DB
     {
         // $tr = '';
         $div = '';
-        $req = "SELECT * FROM personne INNER JOIN  client on personne.id_personne = client.id_personne INNER JOIN reservation on client.id_client = reservation.id_client INNER JOIN chambre_res on reservation.id_reservation = chambre_res.id_reservation INNER JOIN bien on chambre_res.id_bien = bien.id_bien INNER JOIN bien_ ON bien.ID_Bien_info = bein.ID_Bien ";
+        $req = "SELECT * FROM personne INNER JOIN  client on personne.id_personne = client.id_personne INNER JOIN reservation on client.id_client = reservation.id_client INNER JOIN chambre_res on reservation.id_reservation = chambre_res.id_reservation INNER JOIN bien on chambre_res.id_bien = bien.id_bien INNER JOIN bien_ ON bien.ID_Bien_info = bien_.ID_Bien ";
         $stmt = $this->connect()->query($req);
         $rows = $stmt->fetchAll();
         return $rows;

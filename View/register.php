@@ -43,7 +43,7 @@
                         <input type="password" class="form-control" pattern="[a-z0-9._%+-@]{4,20}$" name="password" id="inputPassword" placeholder="Password">
                     </div>
                 </div>
-                <input type="botton" value="save" class="w-100 btn btn-primary btn-md">
+                <input type="submit" value="save" class="w-100 btn btn-primary btn-md">
             </form>
         </div>
 

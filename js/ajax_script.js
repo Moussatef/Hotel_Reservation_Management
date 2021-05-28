@@ -1,5 +1,7 @@
-$(document).ready(function () {
 
+
+
+$(document).ready(function () {
     var cmp = 0;
     $("#btn_sub").click(function () {
         var bien = $("#bien").val();
@@ -43,7 +45,7 @@ $(document).ready(function () {
                 // document.getElementById("bien").value = "Null";
             }
         })
-        $("#bien").val("Null")
+        $("#bien").val("0")
         $("#Lit").hide();
         $("#Vue").hide();
         $("#pension").val("Null");
@@ -102,7 +104,7 @@ $(document).ready(function () {
                 // document.getElementById("bien").value = "Null";
             }
         })
-        $("#bien").val("Null")
+        $("#bien").val("0")
         $("#Lit").hide();
         $("#Vue").hide();
         $("#pension").val("Null");
