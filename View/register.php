@@ -12,7 +12,7 @@
 <?php include '../includs/headre.php'; ?>
 
 <body>
-    <div class="container">
+    <div class="container " style="margin-top: 8%;">
 
         <div class="row  sing">
             <h1>Sign Up</h1>

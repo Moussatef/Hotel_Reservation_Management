@@ -12,11 +12,11 @@
 
 <body>
     <?php include '../includs/headre.php'; ?>
-    <div class="container mt-5">
+    <div class="container " style="margin-top: 8%;">
         <div class="row">
             <div class="sing">
                 <h1>Login</h1>
-                <h2>Hello! let's get started</h2>
+                <h2>Hello! let's Go</h2>
                 <h4>Sign in to continue.</h4>
                 <form action="../controller/controller.php" method='POST'>
                     <span style="color:red;"></span>
