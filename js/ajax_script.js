@@ -1,25 +1,7 @@
-
-
-
 $(document).ready(function () {
     var cmp = 0;
     $("#btn_sub").click(function () {
-        var bien = $("#bien").val();
-        var Lit = $("#Lit").val();
-        var Vue = $("#Vue").val();
-        var pension = $("#pension").val();
-        var img_bien = document.getElementById("img_Bine").src;
-        var NB_Jour = $("#NB_Jour").val();
-
-        var prix = $("#prix").val();
-
-        var nb_bambin = $("#NB_bambin").val();
-        var nb_enfant = $("#NB_enfant").val();
-        var nb_adulte = $("#NB_adulte").val();
-        var select_bambin = $("#select_bambin").val();
-        var select_enfant = $("#select_enfant").val();
-        var select_adulte = $("#select_adulte").val();
-
+        get_info()
         cmp = 0;
         $.ajax({
             url: "../controller/controller_2.php",
@@ -45,38 +27,13 @@ $(document).ready(function () {
                 // document.getElementById("bien").value = "Null";
             }
         })
-        $("#bien").val("0")
-        $("#Lit").hide();
-        $("#Vue").hide();
-        $("#pension").val("Null");
-        $("#NB_Jour").val("1");
-        $("#prix").val("0");
-        $("#NB_bambin").val("");
-        $("#NB_enfant").val("");
-        $("#NB_adulte").val("");
-        $("#select_bambin").val("Null");
-        $("#select_enfant").val("Null");
-        $("#select_adulte").val("Null");
+        vedie()
         // window.location.href = "http://localhost/Brief5_Php/View/profil_client.php";
 
     });
 
     $("#btn_plus").click(function () {
-        var bien = $("#bien").val();
-        var Lit = $("#Lit").val();
-        var Vue = $("#Vue").val();
-        var pension = $("#pension").val();
-        var img_bien = document.getElementById("img_Bine").src;
-        var NB_Jour = $("#NB_Jour").val();
-
-        var prix = $("#prix").val();
-
-        var nb_bambin = $("#NB_bambin").val();
-        var nb_enfant = $("#NB_enfant").val();
-        var nb_adulte = $("#NB_adulte").val();
-        var select_bambin = $("#select_bambin").val();
-        var select_enfant = $("#select_enfant").val();
-        var select_adulte = $("#select_adulte").val();
+        get_info()
         cmp++;
 
 
@@ -104,18 +61,7 @@ $(document).ready(function () {
                 // document.getElementById("bien").value = "Null";
             }
         })
-        $("#bien").val("0")
-        $("#Lit").hide();
-        $("#Vue").hide();
-        $("#pension").val("Null");
-        $("#NB_Jour").val("1");
-        $("#prix").val("0");
-        $("#NB_bambin").val("");
-        $("#NB_enfant").val("");
-        $("#NB_adulte").val("");
-        $("#select_bambin").val("Null");
-        $("#select_enfant").val("Null");
-        $("#select_adulte").val("Null");
+        vedie()
         // window.location.href = "http://localhost/Brief5_Php/View/profil_client.php";
 
     });
@@ -124,6 +70,37 @@ $(document).ready(function () {
     //     $('#ssc').fadeOut('fast');
     // }, 1000);
 });
+function get_info() {
+    var bien = $("#bien").val();
+    var Lit = $("#Lit").val();
+    var Vue = $("#Vue").val();
+    var pension = $("#pension").val();
+    var img_bien = document.getElementById("img_Bine").src;
+    var NB_Jour = $("#NB_Jour").val();
+
+    var prix = $("#prix").val();
+
+    var nb_bambin = $("#NB_bambin").val();
+    var nb_enfant = $("#NB_enfant").val();
+    var nb_adulte = $("#NB_adulte").val();
+    var select_bambin = $("#select_bambin").val();
+    var select_enfant = $("#select_enfant").val();
+    var select_adulte = $("#select_adulte").val();
+}
+function vedie() {
+    $("#bien").val("0")
+    $("#Lit").hide();
+    $("#Vue").hide();
+    $("#pension").val("Null");
+    $("#NB_Jour").val("1");
+    $("#prix").val("0");
+    $("#NB_bambin").val("");
+    $("#NB_enfant").val("");
+    $("#NB_adulte").val("");
+    $("#select_bambin").val("Null");
+    $("#select_enfant").val("Null");
+    $("#select_adulte").val("Null");
+}
 
 
 
