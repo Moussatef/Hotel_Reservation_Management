@@ -15,6 +15,8 @@ un bien est défini par son nom, type, vue,..
 
 ![Brief5](https://user-images.githubusercontent.com/42185573/115595764-d7a3e980-a2c6-11eb-87f7-508d8954a84e.JPG)
 
+![Brief5](https://github.com/Moussatef/Brief5_Gestion_des_reservation/blob/main/img/New%20folder/Screenshot_10.png)
+
 ## Vous êtes amenés à réaliser:
 
 - le diagramme de cas d’utilisation
