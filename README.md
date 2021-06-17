@@ -14,8 +14,29 @@ un bien est défini par son nom, type, vue,..
 - lien : https://miro.com/welcomeonboard/l7ZuAyql6grQcvnQV8mTdLSJtUMrOIstcKkuk8Qujwhg4VQkX04EAUHlKmQKVm07
 
 ![Brief5](https://user-images.githubusercontent.com/42185573/115595764-d7a3e980-a2c6-11eb-87f7-508d8954a84e.JPG)
+## image site qui contient:
 
+- Home page
+![Brief5](https://github.com/Moussatef/Brief5_Gestion_des_reservation/blob/main/img/New%20folder/Screenshot_15.png)
 ![Brief5](https://github.com/Moussatef/Brief5_Gestion_des_reservation/blob/main/img/New%20folder/Screenshot_10.png)
+
+- Login page
+![Brief5](https://github.com/Moussatef/Brief5_Gestion_des_reservation/blob/main/img/New%20folder/Screenshot_16.png)
+
+- Registre page 
+
+![Brief5](https://github.com/Moussatef/Brief5_Gestion_des_reservation/blob/main/img/New%20folder/Screenshot_17.png)
+
+- Reservation page 
+
+![Brief5](https://github.com/Moussatef/Brief5_Gestion_des_reservation/blob/main/img/New%20folder/Screenshot_12.png)
+![Brief5](https://github.com/Moussatef/Brief5_Gestion_des_reservation/blob/main/img/New%20folder/Screenshot_13.png)
+![Brief5](https://github.com/Moussatef/Brief5_Gestion_des_reservation/blob/main/img/New%20folder/Screenshot_14.png)
+ - Profil client
+![Brief5](https://github.com/Moussatef/Brief5_Gestion_des_reservation/blob/main/img/New%20folder/Screenshot_11.png)
+-Profil Admin
+![Brief5](https://github.com/Moussatef/Brief5_Gestion_des_reservation/blob/main/img/New%20folder/Screenshot_18.png)
+![Brief5](https://github.com/Moussatef/Brief5_Gestion_des_reservation/blob/main/img/New%20folder/Screenshot_19.png)
 
 ## Vous êtes amenés à réaliser:
 
